@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/projects/CPE517/hw1_1
+vSimpleALU
+Z0 !s110 1474946164
+!i10b 1
+!s100 jDl4GIWYz>gIJLA?VL]0X1
+I1nH0>5Z82kQhlS5_Ta6]G1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/projects/CPE517/hw1_2
+w1474945868
+8C:/projects/CPE517/hw1_2/SimpleALU.v
+FC:/projects/CPE517/hw1_2/SimpleALU.v
+L0 9
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1474946164.000000
+!s107 C:/projects/CPE517/hw1_2/SimpleALU.v|
+!s90 -reportprogress|300|-work|hw1_2|-stats=none|C:/projects/CPE517/hw1_2/SimpleALU.v|
+!s101 -O0
+!i113 1
+Z5 o-work hw1_2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@simple@a@l@u
+vSimpleALUTB
+R0
+!i10b 1
+!s100 Y>CS[77O0FEGLG_T;PiSM0
+IQ^i=;eZ[[bLOA_aQ;n=W41
+R1
+R2
+w1474946161
+8C:/projects/CPE517/hw1_2/SimpleALUTB.v
+FC:/projects/CPE517/hw1_2/SimpleALUTB.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/CPE517/hw1_2/SimpleALUTB.v|
+!s90 -reportprogress|300|-work|hw1_2|-stats=none|C:/projects/CPE517/hw1_2/SimpleALUTB.v|
+!s101 -O0
+!i113 1
+R5
+n@simple@a@l@u@t@b
