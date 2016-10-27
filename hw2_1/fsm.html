@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>FSM</title>
+</head>
+<body>
+<label for="input">Input</label>
+<input id="input" type="text" pattern="[0-9a-fA-F]" placeholder="a hex digit">
+<button id="clock">Clock</button>
+<br>
+<label for="output">Output</label>
+<input disabled="disabled" id="output" type="text" value="0">
+<button id="reset">Reset</button>
+<label for="async_reset"><input type="checkbox" id="async_reset" checked="checked"> Async</label>
+<br><br>
+<h3>Console <button id="clear">Clear</button></h3>
+<code id="console"></code>
+<script>
+var input = document.getElementById('input'),
+	output = document.getElementById('output'),
+	console = document.getElementById('console'),
+	clear = document.getElementById('clear'),
+	clock = document.getElementById('clock'),
+	reset = document.getElementById('reset'),
+	async_reset = document.getElementById('async_reset'),
+	// This works for both patterns since an increment of 0 is equivalent
+	// to consecutive similar numbers.
+	STATES = Object.freeze({
+		RESET: 0,
+		FIRST: 1,
+		SECOND: 2,
+		THIRD: 3,
+		FOURTH: 4 
+	}),
+	seq = [null, null, null],
+	seq_str = '',
+	state,
+	next_state = STATES.FIRST;
+	
+clock.onclick = onClockButtonClick;
+reset.onclick = onResetButtonClick;
+clear.onclick = onClearButtonClick;
+input.focus();
+
+function onClockButtonClick() {
+	if (input.value == '') {  // ignore empty input.
+		return;
+	}
+	var payload = parseInt(input.value, 16);  // convert hex string to integer
+	if (isNaN(payload) || payload > 15) {
+		alert("Illegal input '" + input.value + "'. Input must be a 4-bit hex string (<=F).");
+		return;
+	}
+
+	state = next_state;
+	switch(state) {
+		// no patterns can be recognized until a third input comes in.
+		case STATES.FIRST: 	 // accepting first input
+			seq = [payload, null, null];
+			next_state = STATES.SECOND;
+			break;
+		case STATES.SECOND:  // accepting second input
+			seq = [seq[0], payload, null];
+			next_state = STATES.THIRD;
+			break;
+		case STATES.THIRD:  // accepting third input
+			var inc = seq[1] - seq[0];
+			if (inc >= 0 && inc == payload - seq[1]) {  // if sequence is incrementing in fixed value, go to fourth input
+				seq = [seq[0], seq[1], payload];
+				next_state = STATES.FOURTH;
+			}
+			else {										// otherwise, continue to accept third input
+				seq = [seq[1], payload, null];
+				next_state = STATES.THIRD;
+			}
+			break;
+		case STATES.FOURTH:  // accept fourth input
+			var inc = seq[2] - seq[1];
+			if (inc >= 0 && inc == payload - seq[2]) {	// if sequence is incrementing in fixed value, output
+				seq = [seq[1], seq[2], payload];
+				next_state = STATES.FOURTH;				// also then repeat taking fourth input
+				output.value = 1;
+			}
+			else {										// otherwise go back to accepting third input
+				seq = [seq[2], payload, null];
+				next_state = STATES.THIRD;
+			}
+			break;
+		case STATES.RESET:
+		default:
+			output.value = 0;
+			seq = [null, null, null];
+			next_state = STATES.FIRST;
+	}
+	
+	// convert the sequence to a string for debugging
+	seq_str = '';
+	for (var i = 0; i < seq.length; i++) {
+		if (seq[i] != null) {
+			seq_str += seq[i].toString(16);
+		}
+	}
+	// display info in console.
+	console.innerHTML = console.innerHTML + 'State: ' + state + ', In: ' + payload + ', Next: ' + next_state + ', Out: ' + output.value + ', Seq: ' + seq_str + '<br>';
+	input.focus();
+	input.value = '';
+}
+
+function onResetButtonClick() {
+	if (async_reset.checked) {
+		output.value = 0;
+		input.focus();
+	}
+	else {
+		input.value = '0';  // if nothing is in box, value is needed to pass validation before entering FSM
+		next_state = STATES.RESET;
+		onClockButtonClick();
+	}
+}
+
+function onClearButtonClick() {
+	console.innerHTML = '';
+}
+</script>
+</body>
+</html>
