@@ -1,0 +1,42 @@
+`include "instructions.v"
+
+module RegisterBank(
+	// read from DecodeStage
+	input[3:0] address1_ds, input[3:0] address2_ds,
+	output reg[31:0]outval1_ds, output reg[31:0]outval2_ds,
+
+	// write from DecodeStage
+	input rw_ds, input[31:0] inval_ds, input[3:0] addr_wr_ds,
+
+	// write from ExecuteStage
+	input rw_es, input[31:0] inval_es, input[3:0] addr_wr_es
+ );
+
+reg[31:0] registers [15:0];
+reg[4:0] i;
+
+initial begin  // clear registers in beginning
+	i = 0;
+	repeat(16) begin
+		registers[i] = 32'd0;
+		i = i + 1;
+	end
+end
+
+always @(*) begin
+	outval1_ds <= registers[address1_ds];
+end
+
+always @(*) begin
+	outval2_ds <= registers[address2_ds];
+end
+
+always @(posedge rw_ds) begin
+	registers[addr_wr_ds] <= inval_ds;
+end
+
+always @(posedge rw_es) begin
+	registers[addr_wr_es] <= inval_es;
+end
+
+endmodule

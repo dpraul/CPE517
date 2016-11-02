@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/projects/CPE517/hw1_2
+vDecodeStage
+Z0 !s110 1478106992
+!i10b 1
+!s100 W6cgG2LL?cHYXYiT@KKCB2
+I[8:AeH[89Y3Ko4>VC4l[D1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/projects/CPE517/hw2_2
+w1478106977
+8C:/projects/CPE517/hw2_2/DecodeStage.v
+FC:/projects/CPE517/hw2_2/DecodeStage.v
+L0 3
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1478106992.000000
+!s107 instructions.v|C:/projects/CPE517/hw2_2/DecodeStage.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/DecodeStage.v|
+!s101 -O0
+!i113 1
+Z5 o-work hw2_2 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@decode@stage
+vExecuteStage
+R0
+!i10b 1
+!s100 GdZMaoXJ`dgB`[gTX]SCQ1
+ICM[_DU0H<C6WY=3PV[^Qf2
+R1
+R2
+w1478106705
+8C:/projects/CPE517/hw2_2/ExecuteStage.v
+FC:/projects/CPE517/hw2_2/ExecuteStage.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 instructions.v|C:/projects/CPE517/hw2_2/ExecuteStage.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/ExecuteStage.v|
+!s101 -O0
+!i113 1
+R5
+n@execute@stage
+vFetchStage
+R0
+!i10b 1
+!s100 lEVS2A=<455;Oj>mRHXm52
+IM]cN0dK;]=S=bfN?:4Hg51
+R1
+R2
+w1478106609
+8C:/projects/CPE517/hw2_2/FetchStage.v
+FC:/projects/CPE517/hw2_2/FetchStage.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 instructions.v|C:/projects/CPE517/hw2_2/FetchStage.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/FetchStage.v|
+!s101 -O0
+!i113 1
+R5
+n@fetch@stage
+vRegisterBank
+Z6 !s110 1478106993
+!i10b 1
+!s100 9eF7mZQ@5HO]eLcZ@dU>91
+IC1GcGmZj;V_QodIoPZag32
+R1
+R2
+w1478105656
+8C:/projects/CPE517/hw2_2/RegisterBank.v
+FC:/projects/CPE517/hw2_2/RegisterBank.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 instructions.v|C:/projects/CPE517/hw2_2/RegisterBank.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/RegisterBank.v|
+!s101 -O0
+!i113 1
+R5
+n@register@bank
+vThreeStageProcessor
+R6
+!i10b 1
+!s100 c[=;=YPYCX9jX5>kP85O]2
+I01?<bAk_MRZnmKhW1DIQ02
+R1
+R2
+w1478102824
+8C:/projects/CPE517/hw2_2/ThreeStageProcessor.v
+FC:/projects/CPE517/hw2_2/ThreeStageProcessor.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z7 !s108 1478106993.000000
+!s107 instructions.v|C:/projects/CPE517/hw2_2/ThreeStageProcessor.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/ThreeStageProcessor.v|
+!s101 -O0
+!i113 1
+R5
+n@three@stage@processor
+vThreeStageProcessor_TB
+R6
+!i10b 1
+!s100 UNi<No2<=oJZKg^91AS5_0
+ImGcT;QZJDOdA^]V;B1_UJ0
+R1
+R2
+w1478052000
+8C:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v
+FC:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+R7
+!s107 instructions.v|C:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v|
+!s90 -reportprogress|300|-work|hw2_2|-stats=none|C:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v|
+!s101 -O0
+!i113 1
+R5
+n@three@stage@processor_@t@b

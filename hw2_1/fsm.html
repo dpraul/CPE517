@@ -54,7 +54,7 @@ function onClockButtonClick() {
     state = next_state;
     switch(state) {
         // no patterns can be recognized until a third input comes in.
-        case STATES.FIRST:      // accepting first input
+        case STATES.FIRST:   // accepting first input
             seq = [payload, null, null];
             next_state = STATES.SECOND;
             break;
@@ -62,9 +62,9 @@ function onClockButtonClick() {
             seq = [seq[0], payload, null];
             next_state = STATES.THIRD;
             break;
-        case STATES.THIRD:  // accepting third input
+        case STATES.THIRD:   // accepting third input
             var inc = seq[1] - seq[0];
-            if (inc >= 0 && inc == payload - seq[1]) {  // if sequence is incrementing in fixed value, go to fourth input
+            if (inc >= 0 && inc == payload - seq[1]) {    // if sequence is incrementing in fixed value, go to fourth input
                 seq = [seq[0], seq[1], payload];
                 next_state = STATES.FOURTH;
             }
@@ -77,7 +77,7 @@ function onClockButtonClick() {
             var inc = seq[2] - seq[1];
             if (inc >= 0 && inc == payload - seq[2]) {    // if sequence is incrementing in fixed value, output
                 seq = [seq[1], seq[2], payload];
-                next_state = STATES.FOURTH;                // also then repeat taking fourth input
+                next_state = STATES.FOURTH;               // also then repeat taking fourth input
                 output.value = 1;
             }
             else {                                        // otherwise go back to accepting third input
