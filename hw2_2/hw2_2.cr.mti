@@ -12,13 +12,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ExecuteStage
 
-} {} {}} C:/projects/CPE517/hw2_2/DecodeStage.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/DecodeStage.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module DecodeStage
-
-Top level modules:
-	DecodeStage
-
 } {} {}} C:/projects/CPE517/hw2_2/ThreeStageProcessor.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/ThreeStageProcessor.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module ThreeStageProcessor
@@ -26,15 +19,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ThreeStageProcessor
 
-} {} {}} C:/projects/CPE517/hw2_2/RegisterBank.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/RegisterBank.v
+} {} {}} C:/projects/CPE517/hw2_2/DecodeStage.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/DecodeStage.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module RegisterBank
+-- Compiling module DecodeStage
 
 Top level modules:
-	RegisterBank
-
-} {} {}} C:/projects/CPE517/hw2_2/instructions.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/instructions.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+	DecodeStage
 
 } {} {}} C:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/ThreeStageProcessor_TB.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -42,5 +32,15 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	ThreeStageProcessor_TB
+
+} {} {}} C:/projects/CPE517/hw2_2/instructions.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/instructions.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} C:/projects/CPE517/hw2_2/RegisterBank.v {1 {vlog -work hw2_2 -stats=none C:/projects/CPE517/hw2_2/RegisterBank.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module RegisterBank
+
+Top level modules:
+	RegisterBank
 
 } {} {}}
